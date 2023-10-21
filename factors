@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+import sys
+
+# function unpacks the number factorial
+def fac():
+
+    try:
+        r_file = sys.argv[1]
+        with open(r_file) as h:
+            for r_number in h:
+                r_number = int(r_number)
+                if r_number % 2 == 0:
+                        print("{}={}*{}".format(r_number, r_number // 2, 2))
+                        continue
+                j = 3
+                while j < r_number // 2:
+                    if r_number % j == 0:
+                        print("{}={}*{}".format(revnumber, revnumber // j, j))
+                        break
+                    j = j + 2
+                if j == (r_number // 2) + 1:
+                    print("{}={}*{}".format(r_number, r_number, 1))
+    except (IndexError):
+        pass
+
+
+# autostart
+fac()
